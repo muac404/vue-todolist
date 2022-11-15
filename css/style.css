@@ -25,7 +25,7 @@
 }
 .to-do-box{
     margin: auto;
-    width: 500px;
+    width: 550px;
     height: 200px;
     background-color: #f3f6f6;
     border-radius: 20px;
@@ -40,6 +40,7 @@
 .add-todo-text{
     padding: 10px;
     border-radius: 10px;
+    width: 250px;
     
 }
 
