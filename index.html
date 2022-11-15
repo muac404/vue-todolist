@@ -25,9 +25,9 @@
                 </div>
 
                     <section class="add-section">
-                        <form>
+                        <form @submit.prevent="addToDo">
                             <label for="fname"></label>
-                            <input class="add-todo-text" type="text" id="fname" name="fname" placeholder="Inserisci testo to do">
+                            <input class="add-todo-text" type="text" id="fname" name="fname" placeholder="Inserisci testo to do" v-model="newToDo">
 
                             <button class="btn-add" type="submit">Aggiungi</button>
                         </form>
@@ -37,14 +37,14 @@
                     <section class="to-do-list">
                         <div class="to-do-text-box">
                             <ul>
-                                <div class="item d-flex mb-5 border-bottom">
+                                <div v-for="todo in toDoList" class="item d-flex mb-5 border-bottom">
                                     <li class="primary-palette-grey">
-                                        Fare la spesa
+                                        {{todo}}
                                     </li>
                                     <i class="fa-solid fa-x primary-palette-grey"></i>
                                 </div>
 
-                                <div class="item d-flex mb-5 border-bottom">
+                                <!-- <div class="item d-flex mb-5 border-bottom">
                                     <li class="primary-palette-grey">
                                         Lavare i piatti
                                     </li>
@@ -56,7 +56,7 @@
                                         Andare dalla nonna
                                     </li>
                                     <i class="fa-solid fa-x primary-palette-grey"></i>
-                                </div>
+                                </div> -->
                                 
                                 
                             </ul>

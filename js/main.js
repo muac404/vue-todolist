@@ -5,7 +5,20 @@ const { createApp } = Vue;
   createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        newToDo: "",
+        toDoList: [
+            "Fare la spesa",
+            "Lavare i piatti",
+            "Pulire il bagno"
+        ],
+
+
+        
       }
+    },
+    methods:{
+        addToDo(){
+            this.toDoList.push(this.newToDo)
+        }
     }
   }).mount('#app')
