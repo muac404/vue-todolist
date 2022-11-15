@@ -19,10 +19,13 @@ const { createApp } = Vue;
     },
     methods:{
         addToDo(){
-            if (this.newToDo !== ""){
+                const newObj = {
+                    text: this.newToDo,
+                    done: false
+                }
                 this.toDoList.push(this.newToDo);
                 this.newToDo = "";
-            }
+            
             
         },
         removeToDo(i){
