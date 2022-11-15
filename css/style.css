@@ -5,9 +5,18 @@
     font-family: 'Roboto', sans-serif;
 
 }
-.primary-palette-grey{
+.primary-palette-blue{
     color: #00152d;
+    cursor: pointer;
 }
+
+.primary-palette-x{
+    color: #00152d;
+    cursor: pointer;
+}
+
+
+
 .container{
     max-width: 800px;
     margin: auto;
@@ -48,11 +57,20 @@
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    margin-left:5px ;
+}
+
+.btn-add:hover{
+    background-color: lightgreen;
 }
 
 li{
     list-style: none;
     padding-left: 10px;
+}
+
+h2{
+    text-align: center;
 }
 
 .to-do-text-box{
@@ -78,6 +96,10 @@ ul{
 
 .to-do-text-box i{
     cursor: pointer;
+}
+
+.to-do-text-box i:hover{
+    color: red;
 }
 
 .border-bottom{

@@ -27,7 +27,7 @@
                     <section class="add-section">
                         <form @submit.prevent="addToDo">
                             <label for="fname"></label>
-                            <input class="add-todo-text" type="text" id="fname" name="fname" placeholder="Inserisci testo to do" v-model="newToDo">
+                            <input class="add-todo-text" type="text" id="fname" name="fname" placeholder="Inserisci l'attività da svolgere" v-model="newToDo" minlength="2" required>
 
                             <button class="btn-add" type="submit">Aggiungi</button>
                         </form>
@@ -36,12 +36,12 @@
                 <div class="to-do-box">
                     <section class="to-do-list">
                         <div class="to-do-text-box">
-                            <ul>
-                                <div v-for="todo in toDoList" class="item d-flex mb-5 border-bottom">
-                                    <li class="primary-palette-grey">
+                            <ul v-if="toDoList.length > 0">
+                                <div v-for="(todo, index) in toDoList" class="item d-flex mb-5 border-bottom">
+                                    <li  class="primary-palette-blue">
                                         {{todo}}
                                     </li>
-                                    <i class="fa-solid fa-x primary-palette-grey"></i>
+                                    <i @click="removeToDo" class="fa-solid fa-x primary-palette-x"></i>
                                 </div>
 
                                 <!-- <div class="item d-flex mb-5 border-bottom">
@@ -60,6 +60,7 @@
                                 
                                 
                             </ul>
+                            <h2 v-else class="primary-palette-grey"> <span><i class="fa-solid fa-check"></i></span> Hai svolto tutte le attività. Relax!</h2>
                         </div>
                     </section>
                 </div>
