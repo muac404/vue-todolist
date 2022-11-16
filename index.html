@@ -36,9 +36,10 @@
                 <div class="to-do-box">
                     <section class="to-do-list">
                         <div class="to-do-text-box">
+                            
                             <ul v-if="toDoList.length > 0">
                                 <div v-for="(todo, index) in toDoList" class="item d-flex mb-5 border-bottom">
-                                    <li  class="primary-palette-blue">
+                                    <li :class="{'done': todo.done}"  class="primary-palette-blue">
                                         {{todo}}
                                     </li>
                                     <i @click="removeToDo" class="fa-solid fa-x primary-palette-x"></i>

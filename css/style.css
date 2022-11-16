@@ -110,3 +110,7 @@ ul{
     padding-bottom: 10px;
     padding-top: 5px;
 }
+
+.done{
+    text-decoration: line-through;
+}
